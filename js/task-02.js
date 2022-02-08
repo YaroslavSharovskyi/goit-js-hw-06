@@ -8,27 +8,27 @@ const ingredients = [
 ];
 
 
-// const itemEl = document.createElement(`li`);
-// itemEl.textContent = ingredients;
-// itemEl.classList.add(`item`);
 
 
-// console.log(itemEl);
+const ListEl = document.querySelector(`ul`);
 
 
-const makeIngredients = ingredients => {
-  const itemIngredients = [];
-  for (const ingredient of ingredients) {
+
+const makeIngredients = (ingredients) => {
+
+return ingredients.map(ingredient => {
   const itemEl = document.createElement(`li`);
   itemEl.textContent = ingredient;
   itemEl.classList.add(`item`);
   return itemEl;
-  }
-
-  return itemIngredients.push(itemEl);
+})
 }
 
+const product = makeIngredients(ingredients);
 
-console.log(makeIngredients(ingredients));
+ListEl.append(...product)
+
+console.log(ListEl);
+
 
 
