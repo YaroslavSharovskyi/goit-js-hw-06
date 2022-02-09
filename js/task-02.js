@@ -13,7 +13,6 @@ const ingredients = [
 const ListEl = document.querySelector(`ul`);
 
 
-
 const makeIngredients = (ingredients) => {
 
 return ingredients.map(ingredient => {
@@ -26,7 +25,7 @@ return ingredients.map(ingredient => {
 
 const product = makeIngredients(ingredients);
 
-ListEl.append(...product)
+ListEl.append(...product);
 
 console.log(ListEl);
 

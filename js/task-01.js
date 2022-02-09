@@ -5,6 +5,22 @@ console.log(`Number of categories: ${amountItemEl.length}`);
 
 
 const itemEl = document.querySelectorAll(`.item`);
+
+// // console.log(itemEl);
+
+// itemEl.forEach(item => {
+// const firstItemEl = item.firstElementChild.textContent;
+// const firstListEl = item.nextElementSibling.children.length;
+// console.log(`Category: ${firstItemEl}`);
+// console.log(`Elements: ${firstListEl}`);
+// })
+
+
+
+
+
+
+
 const firstItemEl = itemEl[0].firstElementChild;
 const firstTitleTextEl = firstItemEl.textContent;
 
