@@ -16,15 +16,13 @@ const images = [
 const listEl = document.querySelector('.gallery');
 
 
-const imagesEL = images.map(image => {
-  const itemEl = document.createElement('li');
-  const imgEL = document.createElement('img');
-  imgEL.src = image.url;
-  imgEL.alt = image.alt;
+let imagesEl = images.reduce(
+  (prv, image) => (prv += `<li class = 'gallery__item'><img class='image' src="${image.url}" alt="${image.alt}"/></li>`),
+  '',
+);
 
-  return imgEL;
-})
+// console.log(imagesEl);
 
-// console.log(itemEl);
-// console.log(imgEL);
-console.log(imagesEL);
+listEl.insertAdjacentHTML('afterbegin', imagesEl);
+
+console.log(listEl);
